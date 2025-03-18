@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Button, Container, ContainerInputs, Form, Input, InputLabel, Title, TopBackground } from './styles'
+import UsersImage from './assets/users.png'
 
-function App() {
-  const [count, setCount] = useState(0)
+function Home() {
+
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Container>
+      <TopBackground>
+        <img src={UsersImage} alt="Imagem de usuários" />
+      </TopBackground>
+
+      <Form>
+        <Title>Cadastrar Usuários</Title>
+
+        <ContainerInputs>
+          <div>
+            <InputLabel>Nome <span>*</span></InputLabel>
+            <Input type='text' placeholder='Nome do usuário' />
+
+            <InputLabel>Idade <span>*</span></InputLabel>
+            <Input type='number' placeholder='Idade do usuário' />
+          </div>
+        </ContainerInputs>
+        <div style={{width: '100%'}}>
+          <InputLabel>Email <span>*</span></InputLabel>
+          <Input type='email' placeholder='Email do usuário' />
+
+        </div>
+
+        <Button>Cadastrar Usuário</Button>
+      </Form>
+    </Container >
   )
 }
 
-export default App
+export default Home
