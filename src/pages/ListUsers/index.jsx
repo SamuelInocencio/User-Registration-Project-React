@@ -1,11 +1,13 @@
-
+import DefaultButton from '../../components/Button';
+import TopBackground from '../../components/TopBackground';
 
 function ListUsers() {
-
-    
   return (
-    <div>ListUsers</div>
-  )
+    <>
+      <TopBackground />
+      <DefaultButton>Voltar</DefaultButton>
+    </>
+  );
 }
 
-export default ListUsers
+export default ListUsers;

@@ -1,12 +1,12 @@
 import { Button } from "./styles";
 
 
-function DefaultButton() {
+function DefaultButton({ children, ...props }) {
 
 
   return (
    
-      <Button>Click</Button>
+      <Button {...props}>{children}</Button>
  
   );
 }
