@@ -1,9 +1,10 @@
 import { useRef } from 'react';
 import api from '../../services/api';
 
+import Button from '../../components/Button';
+
 import UsersImage from '../../assets/users.png';
 import {
-  Button,
   Container,
   ContainerInputs,
   Form,
