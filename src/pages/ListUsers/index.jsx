@@ -1,11 +1,16 @@
+import { useNavigate } from 'react-router-dom';
+
 import DefaultButton from '../../components/Button';
 import TopBackground from '../../components/TopBackground';
 
 function ListUsers() {
+
+  const navigate = useNavigate();
+
   return (
     <>
       <TopBackground />
-      <DefaultButton>Voltar</DefaultButton>
+      <DefaultButton onClick={() => navigate('/')}>Voltar</DefaultButton>
     </>
   );
 }
