@@ -3,16 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import api from '../../services/api';
 
 import Button from '../../components/Button';
+import MainTitle from '../../components/Title';
 import TopBackground from '../../components/TopBackground';
 
-import {
-  Container,
-  ContainerInputs,
-  Form,
-  Input,
-  InputLabel,
-  Title,
-} from './styles';
+import { Container, ContainerInputs, Form, Input, InputLabel } from './styles';
 
 function Home() {
   const inputName = useRef();
@@ -35,7 +29,7 @@ function Home() {
       <TopBackground />
 
       <Form>
-        <Title>Cadastrar Usuários</Title>
+        <MainTitle>Cadastrar Usuários</MainTitle>
 
         <ContainerInputs>
           <div>
